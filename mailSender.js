@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
     console.log('in it');
     const msg = {
         from: "atitbotnext@gmail.com",
-        to: "mf@atit-sa.com",
+        to: "marketing@atit-sa.com",
         subject: "Recruit Bot from deployed app ⚡, " + req.body.status + " Profile",
         html: parseResponse(req),
     }
