@@ -1,7 +1,12 @@
 const express = require('express');
 const app = express();
 const mail = require('./mailSender.js');
-const PORT = process.env.PORT || 3000;
+const bodyParser = require("body-parser");
+const PORT = process.env.PORT || 5000;
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(bodyParser.json())
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT, DELETE');
