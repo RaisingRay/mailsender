@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.post('/', async (req, res) => {
+router.get('/', async (req, res) => {
     const msg = {
         from: "atitbotnext@gmail.com",
         to: "mf@atit-sa.com",
@@ -18,6 +18,7 @@ router.post('/', async (req, res) => {
         port: 465,
         host: 'smtp.gmail.com',
     }).sendMail(msg, (err) => {
+        res.send('in it');
         if (err) { res.status(500).send(err); }
         else res.status(200).json(req.body);
     })
