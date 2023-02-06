@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/api/sendMail', async (req, res) => {
+router.post('/', async (req, res) => {
     const msg = {
         from: "atitbotnext@gmail.com",
         to: "mf@atit-sa.com",
