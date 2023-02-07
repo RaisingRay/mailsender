@@ -3,8 +3,6 @@ const nodemailer = require('nodemailer');
 const router = express.Router();
 
 router.post('/', async (req, res) => {
-    console.log(req.body);
-    console.log('in it');
     const msg = {
         from: "atitbotnext@gmail.com",
         to: "mf@atit-sa.com",
